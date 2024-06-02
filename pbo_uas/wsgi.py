@@ -16,4 +16,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pbo_uas.settings')
 application = get_wsgi_application()
 
 # api/wsgi.py
-app = get_wsgi_application()
+app = application
