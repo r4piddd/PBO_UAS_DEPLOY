@@ -6,8 +6,21 @@ from sales.serializers import SaleSerializer, GetSaleSerializer, UpdateSaleSeria
 from pbo_uas.models import Sale, SaleDetails
 from pbo_uas.response import ok_with_msg, ok_with_data, error_with_msg, error_with_data
 from django.utils.dateparse import parse_date
-import logging
+from datetime import datetime
+from django.http import HttpResponse
 
+
+def index(request):
+    now = datetime.now()
+    html = f'''
+    <html>
+        <body>
+            <h1>Hello from Vercel!</h1>
+            <p>The current time is { now }.</p>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)
 
 @api_view(['GET'])
 def getSale(request):

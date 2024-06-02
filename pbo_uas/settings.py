@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-2ktbyi0cgw$e)(ff20p$x-y*v!#n&qn-=gzy=kz-6z6*+6l8(%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# api/settings.py
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 # Application definition
 
@@ -75,7 +75,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pbo_uas.wsgi.application'
+# WSGI_APPLICATION = 'pbo_uas.wsgi.application'
+# api/settings.py
+WSGI_APPLICATION = 'pbo_uas.wsgi.app'
 
 
 # Database
